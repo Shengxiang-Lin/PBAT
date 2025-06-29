@@ -11,6 +11,7 @@ This is the implementation for the paper "Personalized Behavior-Aware Transforme
 0. install pytorch and other dependencies
 ```bash
 pip install -r requirements.txt
+pip install "jsonargparse[signatures]"
 ```
 1. run the model with a `yaml` configuration file like following:
 ```bash

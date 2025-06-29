@@ -9,7 +9,7 @@ class RecDataModule(pl.LightningDataModule):
         self,
         dataset_code: str = None,
         target_behavior: str = None,
-        multi_behavior: Union[bool, List] = None,
+        multi_behavior: bool = False,
         min_uc: int = None,
         num_items: int = None,
         num_users: int = None,

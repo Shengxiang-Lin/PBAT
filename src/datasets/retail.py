@@ -1,6 +1,6 @@
 
 from .base import AbstractDataset
-
+import os
 import pandas as pd
 
 class RetailDataset(AbstractDataset):

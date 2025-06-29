@@ -1,4 +1,3 @@
-
 import pytorch_lightning as pl
 from pytorch_lightning.utilities.cli import LightningCLI
 from src.model import RecModel
@@ -6,7 +5,7 @@ from src.datamodule import RecDataModule
 
 
 def cli_main():
-    cli = LightningCLI(RecModel, RecDataModule, save_config_overwrite=True)
+    cli = LightningCLI(RecModel, RecDataModule, save_config_overwrite=True, parser_kwargs={"parser_mode": "yaml"} )
 
 if __name__ == '__main__':
     cli_main()
