@@ -28,6 +28,7 @@ data:
   predict_only_target: False
 
 trainer:
+  max_epochs: 15
   default_root_dir: logs/ijcai/full
   callbacks:
     - class_path: pytorch_lightning.callbacks.EarlyStopping
@@ -35,7 +36,7 @@ trainer:
         monitor: 'Val:NDCG@10'
         patience: 10
         mode: max  
-  gpus: '2'
+  gpus: '1'
   accelerator: ddp
   accumulate_grad_batches: 4
 seed_everything: 42
@@ -45,3 +46,9 @@ optimizer:
   init_args:
     lr: 0.001
     weight_decay: 0.000001
+
+lr_scheduler:
+  class_path: torch.optim.lr_scheduler.StepLR
+  init_args:
+    step_size: 10
+    gamma: 0.1
