@@ -25,14 +25,12 @@ class RecModel(pl.LightningModule):
     def forward(self, input_ids, b_seq, u_id):
         """前向传播：通过主干网络"""
         return self.backbone(input_ids, b_seq, u_id)
-        
 
     def training_step(self, batch, batch_idx):
         """训练步骤"""
         input_ids = batch['input_ids']  # 获取输入序列
         b_seq = batch['behaviors']  # 获取行为序列
         user_id = batch['user_id']  # 获取用户ID
-        
         # 通过主干网络获取输出（均值、协方差和注意力权重）
         outputsm, outputsc, W_pro = self(input_ids, b_seq, user_id)
         # 重塑输出：合并批次和时间维度 (B*T x H)

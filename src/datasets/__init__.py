@@ -1,6 +1,3 @@
-
-
-
 from .yelp import YelpDataset
 from .retail import RetailDataset
 from .ijcai import IjcaiDataset
@@ -10,7 +7,6 @@ DATASETS = {
     RetailDataset.code(): RetailDataset,
     IjcaiDataset.code(): IjcaiDataset
 }
-
 
 def dataset_factory(
         dataset_code,

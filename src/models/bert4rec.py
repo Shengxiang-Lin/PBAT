@@ -24,7 +24,6 @@ class BERT(pl.LightningModule):
         self.max_len = max_len
         self.n_b = n_b
         self.activation = nn.ELU()  # ELU激活函数
-
         # SAGP（自适应的高斯模式）相关参数
         self.Wub = nn.Linear(d_model, d_model)  # 用户行为转换矩阵
         self.WPub = nn.Linear(d_model, d_model)  # 位置行为转换矩阵

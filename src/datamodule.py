@@ -2,6 +2,7 @@ import pytorch_lightning as pl
 from typing import List, Union
 from .datasets import dataset_factory
 from .dataloaders import RecDataloader
+from .dataloaders import RecDataloaderNeg
 
 class RecDataModule(pl.LightningDataModule):
     def __init__(
