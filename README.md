@@ -1,5 +1,6 @@
-
-# Personalized Behavior-Aware Transformer for Multi-Behavior Sequential Recommendation
+<h1 align="center">
+Personalized Behavior-Aware Transformer for Multi-Behavior Sequential Recommendation
+</h1>
 This is the implementation for the paper "Personalized Behavior-Aware Transformer for Multi-Behavior Sequential Recommendation", ACM Multimedia 2023.
 ![](PBAT.jpg)
 
@@ -23,7 +24,7 @@ python run.py fit --config src/configs/retail.yaml
 ## Dataset
 Due to file size limitations, we have not uploaded all of the data. You can download the datasets from [releases](https://github.com/Shengxiang-Lin/PBAT/releases).
 
-## log View   
+## Log View   
 ```bash
 pip install tensorboard==2.14.0
 pip install protobuf==3.20.3.3
